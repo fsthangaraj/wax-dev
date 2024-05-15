@@ -1,6 +1,6 @@
 {
-  "name": "wax-dev",
-  "version": "0.1.7",
+  "name": "@wally-ax/wax-dev",
+  "version": "0.1.8",
   "description": "WallyAX's developer friendly accessibility test framework",
   "main": "index.js",
   "scripts": {
@@ -11,5 +11,13 @@
     "test"
   ],
   "author": "shritk",
-  "license": "MPL-2.0"
+  "license": "MPL-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wallyax/wax-dev.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wallyax/wax-dev/issues"
+  },
+  "homepage": "https://github.com/wallyax/wax-dev#readme"
 }
