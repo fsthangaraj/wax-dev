@@ -23,7 +23,7 @@ module.exports = {
   apiKey: "YOUR_WALLY_DEVELOPER_API_KEY"
 };
 ```
-rules: An array of strings representing rule definitions. Available rules can be found [here]("https://kb.wallyax.com/wax-dev/rule-definitions"). An empty array will include all rules.
+rules: An array of strings representing rule definitions. Available rules can be found [here]("https://kb.wallyax.com/docs/wax-dev/rules"). An empty array will include all rules.
 
 
 apiKey: A string required for the wax-dev to work. You can request an API key at technology@wallyax.com.
