@@ -25,6 +25,7 @@ module.exports = {
 ```
 rules: An array of strings representing rule definitions. Available rules can be found [here]("https://kb.wallyax.com/wax-dev/rule-definitions"). An empty array will include all rules.
 
+
 apiKey: A string required for the wax-dev to work. You can request an API key at technology@wallyax.com.
 
 ### Example Usage with Jest Testing Library in a React App
