@@ -1,7 +1,6 @@
 # WAX Dev Testing Framework
 
 ## Description
-
 A lightweight but extensive automated accessibiilty testing framework
 
 ## Installation

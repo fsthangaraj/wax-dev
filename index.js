@@ -1,5 +1,7 @@
 const runner = require('./src/runner');
-const runWax = runner(htmlContent, options);
-  
+
+const runWax = (htmlContent, options) => {
+    return runner(htmlContent, options);
+  };
+
 module.exports = runWax;
-  
