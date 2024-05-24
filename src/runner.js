@@ -1,10 +1,10 @@
 const apiURL = require('./utils/api.js');
-const readUserConfig = require('./utils/config.js');
 
 const runner = function (code, options) {
   let config = {};
-  if(!options && !options?.apiKey) {
-     config = readUserConfig();
+  if (!options && !options?.apiKey) {
+    const readUserConfig = require('./utils/config.js');
+    config = readUserConfig();
   } else {
     config = options;
   }
