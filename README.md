@@ -1,7 +1,7 @@
 # WAX Dev Testing Framework
 
 ## Description
-A lightweight and extensive automated accessibiilty testing framework
+A lightweight and extensive automated accessibility testing framework
 
 As a part of the WallyAX ecosystem accessibility tools, this package helps run accessibility tests on components and can easily be part of existing unit or integration testing.
 
@@ -26,10 +26,10 @@ module.exports = {
 rules: An array of strings representing rule definitions. Available rules can be found [here]("https://kb.wallyax.com/docs/wax-dev/rules"). An empty array will include all rules.
 
 
-apiKey: A string required for the wax-dev to work. You can request an API key at technology@wallyax.com.
+apiKey: A string required for the wax-dev to work. You can get the api key from [WallyAX Developer Portal](https://developer.wallyax.com)
 
 ### Example Usage with Jest Testing Library in a React App
-runWax functions takes the rendered or pre-rendered html content and options as input.
+runWax function takes the rendered or pre-rendered html content and options as input.
 
 For a ButtonList component:
 ```javascript
@@ -47,7 +47,7 @@ describe('ButtonList AX Test', () => {
 });
 ```
 
-Note: the rule configuration at test level will be over-ridden by the global configuraiton in wax.config.js
+Note: the rule configuration at test level will be overridden by the global configuration in wax.config.js
 
 ### Results
 The results will be an array of violations based on the config. Example:
