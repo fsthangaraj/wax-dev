@@ -253,7 +253,7 @@ addons.add(PANEL_ID, {
 
 type:  types.PANEL,
 
-title:  'Wax-Dev',
+title:  'WAX Accessibility Issues',
 
 render: ({ active, key }) =>  <MyPanel  active={active}  key={key}  />,
 
