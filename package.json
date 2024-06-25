@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/wallyax/wax-dev/issues"
   },
-  "homepage": "https://github.com/wallyax/wax-dev#readme"
+  "homepage": "https://github.com/wallyax/wax-dev#readme",
+  "dependencies": {
+    "react-dom": "^18.3.1"
+  }
 }
