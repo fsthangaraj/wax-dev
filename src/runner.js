@@ -11,10 +11,10 @@ const debounce = (func, wait) => {
 
 // Define styles for different severity levels
 const styles = {
-  severe: 'color: #ffb3b3; font-weight: bold;',
-  moderate: 'color: #ffd500; font-weight: bold;',
-  minor: 'color: white; font-weight: bold;',
-  default: 'font-weight: bold;'
+  Severe: 'color: #ffb3b3; font-weight: bold;',
+  Moderate: 'color: #ffd500; font-weight: bold;',
+  Minor: 'color: white; font-weight: bold;',
+  default: 'font-weight:bold;'
 };
 
 const runner = (React, ReactDOMServer, options) => {
@@ -42,7 +42,7 @@ const runner = (React, ReactDOMServer, options) => {
         .then((response) => response.json())
         .then((data) => {
           // Group the results by severity
-          const groupedResults = data.reduce((acc, item) => {
+          const groupedResults = data?.reduce((acc, item) => {
             if (!acc[item.severity]) {
               acc[item.severity] = [];
             }
@@ -51,13 +51,14 @@ const runner = (React, ReactDOMServer, options) => {
           }, {});
 
           // Log the results in a collapsible format
-          console.groupCollapsed('%cAccessibility Check Results', styles.default);
+          console.groupCollapsed('%cAccessibility Check Results', 'color:#FED600;');
+          
           Object.keys(groupedResults).forEach((severity) => {
-            console.groupCollapsed(`%c${severity} issues`, styles[severity] || styles.default);
+            console.groupCollapsed(`%c${severity}`, styles[severity] || styles.default);
             groupedResults[severity].forEach((issue) => {
-              console.groupCollapsed(`Element: %c${issue.element}`, styles[severity] || styles.default);
-              console.log(`%cMessage: %c${issue.message}`, styles.default, styles[severity] || styles.default);
-              console.log(`%cDescription: %c${issue.description}`, styles.default, styles[severity] || styles.default);
+              console.groupCollapsed(`Element: %c${issue.element}`, styles.default);
+              console.log(`Message: ${issue.message}`);
+              console.log(`Description: ${issue.description}`);
               console.groupEnd();
             });
             console.groupEnd();
@@ -68,7 +69,6 @@ const runner = (React, ReactDOMServer, options) => {
         })
         .catch((error) => {
           console.log('Error running accessibility check:', error);
-          reject(error);
         });
     });
   };
