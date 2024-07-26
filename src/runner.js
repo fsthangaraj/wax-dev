@@ -19,7 +19,7 @@ const runner = function (code, options) {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ element: code, rules: config.rules }),
+      body: JSON.stringify({ element: code, rules: config.rules, isLinter:"false" }),
     })
       .then((response) => response.json())
       .then((data) => {
