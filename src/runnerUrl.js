@@ -1,4 +1,4 @@
-const apiURL = require('./utils/api.js');
+const {apiUrl}= require('./utils/api.js');
 
 const runner = function (code, options) {
   let config = {};
@@ -14,12 +14,12 @@ const runner = function (code, options) {
     );
   }
   return new Promise((resolve, reject) => {
-    fetch(apiURL + '?apiKey=' + config.apiKey, {
+    fetch(apiUrl + '?apiKey=' + config.apiKey, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ element: code, rules: config.rules, isLinter:"false" }),
+      body: JSON.stringify({ url: code }),
     })
       .then((response) => response.json())
       .then((data) => {
