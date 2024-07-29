@@ -42,7 +42,7 @@ apiKey: A string required for the wax-dev to work. You can get the api key from 
 
 runWax function takes the rendered or pre-rendered html content and options as input.
 
-  
+runWaxUrl function takes the Website URL and options as input.  
 
 For a ButtonList component:
 
@@ -124,7 +124,7 @@ Create a waxConfig.js file:
 ```javascript
 const waxConfig = {
   rules: [],
-  apiKey: "48154a1b-550a-4042-9c62-690354a20c8e"
+  apiKey: "API KEY"
 };
 
 export default waxConfig;
@@ -134,6 +134,26 @@ export default waxConfig;
 ### Results
 
 The results will be an array of violations based on the config. A **button_violation.json** file will be created and violations will be saved.
+
+## Example usage for running URL audit
+
+```javascript
+import { runWaxUrl } from '@wally-ax/wax-dev';
+import waxConfig from './waxconfig';
+
+async function performWaxOperation(url, waxConfig) {
+    try {
+        const resultUrl = await runWaxUrl(url, waxConfig);
+        console.log('resultUrl', resultUrl);
+    } catch (error) {
+        console.error('Error running Wax URL:', error);
+    }
+}
+const url = 'http://example.com'; // Replace with your actual URL
+
+performWaxOperation(url, waxConfig);
+
+```
 
 ## Integrate Storybook with WAX Dev
 
