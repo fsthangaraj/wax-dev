@@ -1,3 +1,3 @@
-const apiHtml = "https://gateway.wallyax.com/wallyax/audit-lint-html/2.0";
-const apiUrl = "https://gateway.wallyax.com/wallyax/audit-url/2.0";
+const apiHtml = "https://base.wallyax.com/audit-lint-html";
+const apiUrl = "https://base.wallyax.com//audit-url";
 module.exports = { apiHtml, apiUrl };
