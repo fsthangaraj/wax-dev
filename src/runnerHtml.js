@@ -14,10 +14,11 @@ const runner = function (code, options) {
     );
   }
   return new Promise((resolve, reject) => {
-    fetch(apiHtml + '?apiKey=' + config.apiKey, {
+    fetch(apiHtml, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
+        'Authorization': `${config.apiKey}`,
       },
       body: JSON.stringify({ element: code, rules: config.rules, isLinter:"false" }),
     })
