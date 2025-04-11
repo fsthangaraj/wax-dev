@@ -34,32 +34,18 @@ const runner = function (code, options) {
           groupData = {}
         } = item;
     
-        const cleanedItem = {
-          element,
-          message,
-          severity,
-          grouping: groupData.grouping,
-          subgroup: groupData.subgroup,
-          why_issue: groupData.why_issue,
-          what_is_missing: groupData.what_is_missing,
-          how_to_solve: groupData.how_to_solve
-        };
-    
-        if (description) {
-          cleanedItem.description = description;
-        }
-    
-        if (groupData.example_before) {
-          cleanedItem.example_before = groupData.example_before;
-        }
-    
-        if (groupData.example_after) {
-          cleanedItem.example_after = groupData.example_after;
-        }
-    
-        if (code) {
-          cleanedItem.code = code.split('_')[0].split(',')[0];
-        }
+        const cleanedItem = {};
+        if (element) cleanedItem.element = element;
+        if (message) cleanedItem.message = message;
+        if (severity) cleanedItem.severity = severity;
+        if (groupData.why_issue) cleanedItem.impact = groupData.why_issue;
+        if (groupData.what_is_missing) cleanedItem.what_is_missing = groupData.what_is_missing;
+        if (groupData.how_to_solve) cleanedItem.how_to_fix = groupData.how_to_solve;
+        if (description) cleanedItem.description = description;
+        if (groupData.example_before) cleanedItem.example_before = groupData.example_before;
+        if (groupData.example_after) cleanedItem.example_after = groupData.example_after;
+        if (code) cleanedItem.code = code.split('_')[0].split(',')[0];
+
     
         return cleanedItem;
       });

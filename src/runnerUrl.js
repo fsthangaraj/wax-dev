@@ -36,31 +36,19 @@ const runner = function (code, options) {
             groupData = {}
           } = item;
 
-          const cleanedItem = {
-            type,
-            message,
-            context,
-            selector,
-            component,
-            issue_category_name,
-            grouping: groupData?.grouping,
-            subgroup: groupData?.subgroup,
-            why_issue: groupData?.why_issue,
-            what_is_missing: groupData?.what_is_missing,
-            how_to_solve: groupData?.how_to_solve
-          };
+          const cleanedItem = {};
 
-          if (code) {
-            cleanedItem.code = code?.split('_')[0].split(',')[0];
-          }
+          if (type) cleanedItem.type = type;
+          if (message) cleanedItem.message = message;
+          if (context) cleanedItem.context = context;
+          if (selector) cleanedItem.selector = selector;
+          if (groupData?.why_issue) cleanedItem.impact = groupData.why_issue;
+          if (groupData?.what_is_missing) cleanedItem.what_is_missing = groupData.what_is_missing;
+          if (groupData?.how_to_solve) cleanedItem.how_to_fix = groupData.how_to_solve;
+          if (groupData?.example_before) cleanedItem.example_before = groupData.example_before;
+          if (groupData?.example_after) cleanedItem.example_after = groupData.example_after;
+          if (code) cleanedItem.code = code.split('_')[0].split(',')[0];
 
-          if (groupData?.example_before) {
-            cleanedItem.example_before = groupData?.example_before;
-          }
-
-          if (groupData?.example_after) {
-            cleanedItem.example_after = groupData?.example_after;
-          }
 
           return cleanedItem;
         });
