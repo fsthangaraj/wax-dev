@@ -20,10 +20,13 @@ const runner = function (code, options) {
         'Content-Type': 'application/json',
         'Authorization': `${config.apiKey}`,
       },
-      body: JSON.stringify({ element: code, rules: config.rules, isLinter:"false" }),
+      body: JSON.stringify({ element: code, rules: config.rules, isLinter:"true" }),
     })
-    .then((response) => response.json())
-    .then((data) => {
+    .then(async (response) => {
+      const data = await response.json();
+      if (!response.ok) {
+        return resolve([{ error: data?.error || `Error: ${response.status}` }]);
+      }
       const cleanedData = data.map((item) => {
         const {
           element,
