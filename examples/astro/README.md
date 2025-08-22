@@ -167,11 +167,3 @@ npm run e2e:all
 npm run wax:all
 ```
 
-
-- [Astro Documentation](https://docs.astro.build/)
-- [@wally-ax/wax-dev](https://www.npmjs.com/package/@wally-ax/wax-dev)
-- [Testing Library Documentation](https://testing-library.com/)
-- [Vitest Documentation](https://vitest.dev/)
-
----
-
