@@ -2,12 +2,6 @@
 
 A simple Astro.js application with **8 testing libraries** integrated with **@wally-ax/wax-dev** for accessibility testing.
 
-##  Features
-
-- **Simple UI**: Button, headings, and links components
-- **Interactive Elements**: Click counters and alerts
-- **Accessibility Testing**: Integrated with Wax accessibility library
-- **8 Testing Frameworks**: Complete testing ecosystem
 
 ##  Testing Libraries Integrated
 
@@ -40,17 +34,17 @@ The app will be available at: **http://localhost:4321**
 
 
 
-### **🏁 Prerequisites**
+###  Prerequisites
 
 1. **Start the Astro development server**:
    ```bash
    npm run dev
    ```
-   ⚠️ **Important**: The server must be running at `http://localhost:4321` for tests to work!
+    **Important**: The server must be running at `http://localhost:4321` for tests to work!
 
 2. **Verify the app is accessible**: Visit `http://localhost:4321` in your browser
 
-### **🧪 Run Wax Tests by Framework**
+###  Run Wax Tests by Framework
 
 #### **Unit Testing Frameworks (Node.js)**
 
@@ -88,15 +82,6 @@ npm run testcafe:wax
 npm run nightwatch:wax
 ```
 
-### **⚡ Quick Test All Frameworks**
-
-Run accessibility tests across **ALL 8 frameworks** at once:
-
-```bash
-npm run wax:all
-```
-
-This runs: Vitest → Jest → Mocha → Cypress → Playwright → WebdriverIO → TestCafe → Nightwatch
 
 
 ###  Customizing Wax Configuration
@@ -190,4 +175,3 @@ npm run wax:all
 
 ---
 
-**Built with ❤️ using Astro.js and 8 testing frameworks** 
