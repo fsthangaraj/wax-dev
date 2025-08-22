@@ -1,0 +1,79 @@
+{
+  "name": "react-testing-demo",
+  "version": "1.0.0",
+  "description": "Simple React app for testing npm packages",
+  "main": "index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "test:watch": "react-scripts test --watch",
+    "test:coverage": "react-scripts test --coverage --watchAll=false",
+    "jest:wax": "react-scripts test src/App.wax.test.js --watchAll=false",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "playwright:install": "playwright install",
+    "playwright:test": "playwright test",
+    "playwright:test:ui": "playwright test --ui",
+    "webdriverio:test": "wdio run wdio.conf.js",
+    "testcafe:test": "testcafe chrome src/tests/testcafe/",
+    "nightwatch:test": "nightwatch",
+    "e2e:all": "npm run cypress:run && npm run playwright:test && npm run webdriverio:test && npm run testcafe:test && npm run nightwatch:test",
+    "vitest": "vitest",
+    "vitest:ui": "vitest --ui",
+    "vitest:run": "vitest run",
+    "vitest:wax": "vitest run src/tests/vitest/app.wax.test.jsx",
+    "mocha:test": "mocha",
+    "mocha:wax": "mocha src/tests/mocha/app.wax.test.js"
+  },
+  "dependencies": {
+    "@wally-ax/wax-dev": "^0.2.62",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-scripts": "5.0.1"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.28.3",
+    "@babel/preset-react": "^7.27.1",
+    "@babel/register": "^7.28.3",
+    "@playwright/test": "^1.55.0",
+    "@testing-library/jest-dom": "^6.1.4",
+    "@testing-library/react": "^14.1.2",
+    "@testing-library/user-event": "^14.5.1",
+    "@vitest/ui": "^3.2.4",
+    "@wdio/cli": "^8.46.0",
+    "@wdio/local-runner": "^8.46.0",
+    "@wdio/mocha-framework": "^8.46.0",
+    "@wdio/spec-reporter": "^8.43.0",
+    "chai": "^4.3.7",
+    "cypress": "^14.5.4",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "jsdom": "^26.1.0",
+    "jsdom-global": "^3.0.2",
+    "mocha": "^11.7.1",
+    "nightwatch": "^3.12.2",
+    "testcafe": "^3.7.2",
+    "vitest": "^3.2.4",
+    "webdriverio": "^8.46.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  }
+}

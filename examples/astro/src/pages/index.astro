@@ -1,0 +1,173 @@
+---
+// Astro page component
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Astro Testing Demo</title>
+    <meta name="description" content="Astro app for testing accessibility with Wax and all testing libraries" />
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="heading h2">Astro.js Testing Demo</h2>
+      <h1 class="heading h1">Welcome to our Astro app!</h1>
+
+      <div class="content">
+        <p>This is an Astro application for testing accessibility with Wax and all testing libraries.</p>
+        
+        <h3 class="heading h3">Interactive Elements</h3>
+        <div class="buttons">
+          <button class="btn primary" aria-label="Increment counter button" type="button" id="counter-btn">
+            Click me! (0 times)
+          </button>
+          <button class="btn secondary" aria-label="Show alert button" type="button" id="alert-btn">
+            Show Alert
+          </button>
+        </div>
+        
+        <h3 class="heading h3">Useful Links</h3>
+        <div class="links">
+          <a href="https://astro.build" target="_blank" rel="noopener" aria-label="Astro documentation" class="link external">
+            Astro Documentation
+          </a>
+          <a href="https://testing-library.com" target="_blank" rel="noopener" aria-label="Testing Library documentation" class="link external">
+            Testing Library
+          </a>
+          <a href="https://vitest.dev" target="_blank" rel="noopener" aria-label="Vitest testing framework" class="link external">
+            Vitest Testing Framework
+          </a>
+        </div>
+        
+        <h3 class="heading h3">About</h3>
+        <p>This app is designed to test npm packages with real Astro components. It includes:</p>
+        <ul>
+          <li>Button components with click handlers</li>
+          <li>Heading components with different levels</li>
+          <li>Link components with external URLs</li>
+          <li>Static site generation with Astro</li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      // Simple interactivity
+      let clickCount = 0;
+      const counterBtn = document.getElementById('counter-btn');
+      const alertBtn = document.getElementById('alert-btn');
+
+      if (counterBtn) {
+        counterBtn.addEventListener('click', () => {
+          clickCount++;
+          counterBtn.textContent = `Click me! (${clickCount} times)`;
+        });
+      }
+
+      if (alertBtn) {
+        alertBtn.addEventListener('click', () => {
+          alert('Hello from Astro.js!');
+        });
+      }
+    </script>
+
+    <style>
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 2rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      }
+
+      .heading {
+        margin: 1.5rem 0 1rem 0;
+        color: #333;
+      }
+
+      .h1 {
+        font-size: 2.5rem;
+        color: #2563eb;
+      }
+
+      .h2 {
+        font-size: 2rem;
+        color: #1e40af;
+      }
+
+      .h3 {
+        font-size: 1.5rem;
+        color: #1e3a8a;
+      }
+
+      .content {
+        line-height: 1.6;
+      }
+
+      .buttons {
+        margin: 2rem 0;
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+      }
+
+      .btn {
+        padding: 0.75rem 1.5rem;
+        border: none;
+        border-radius: 0.5rem;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+
+      .btn.primary {
+        background-color: #2563eb;
+        color: white;
+      }
+
+      .btn.primary:hover {
+        background-color: #1d4ed8;
+      }
+
+      .btn.secondary {
+        background-color: #6b7280;
+        color: white;
+      }
+
+      .btn.secondary:hover {
+        background-color: #4b5563;
+      }
+
+      .links {
+        margin: 2rem 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .link {
+        color: #2563eb;
+        text-decoration: none;
+        padding: 0.5rem 0;
+      }
+
+      .link:hover {
+        text-decoration: underline;
+      }
+
+      .link.external::after {
+        content: " ↗";
+        font-size: 0.8em;
+      }
+
+      ul {
+        margin: 1rem 0;
+        padding-left: 2rem;
+      }
+
+      li {
+        margin: 0.5rem 0;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="1"
+            tests="1">
+
+  <testsuite name="app.test" id="app.test"
+    errors="0" failures="1" hostname="" package="app.test" skipped="0"
+    tests="1" time="5.301" timestamp="">
+  
+    <testcase name="Vue App Nightwatch Tests" classname="app.test" time="5.299" assertions="2">
+
+      <failure message="Testing if element &lt;h1&gt; contains text &#39;Vue Testing Demo&#39; in 5000ms - expected &#34;contains text &#39;Vue Testing Demo&#39;&#34; but got: &#34;does not contain &#39;Vue Testing Demo&#39;&#34; (5172ms)">    at Vue App Nightwatch Tests (/Users/fleetstudiotechnologies/Documents/GitHub/product-readiness/vue/src/tests/nightwatch/app.test.cjs:8:15)</failure>
+
+    
+    </testcase>
+  
+
+  
+
+    
+
+  
+  </testsuite>
+</testsuites>
